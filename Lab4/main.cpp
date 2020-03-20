@@ -56,6 +56,25 @@ int main() {
 			Produs p(nume,data, pret);
 			rep.deleteProdus(p);
 		}
+		if (optiune == 4)
+		{
+			char nume[100];
+			cout << "Dati numele de modificat: " << endl;
+			cin >> nume;
+			char data[50] = " ";
+			int pret = 0;
+			Produs p(nume, data, pret);
+			char nume1[100];
+			cout << " Numele nou este:  " << endl;
+			cin >> nume1;
+			char data1[100];
+			cout << " Data noua este: ";
+			cin >> data1;
+			int pret1;
+			cout << "Pretul nou este: " << endl;
+			cin >> pret1;
+			rep.updateProdus(p, nume1, data1, pret1);
+		}
 		if (optiune == 0)
 			break;
 	}
