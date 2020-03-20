@@ -9,6 +9,7 @@ void menu() {
 	cout << "1. Adauga produs" << endl;
 	cout << "2. Afisare produse " << endl;
 	cout << "3. Stergere produs" << endl;
+	cout << "4. Modificare produs" << endl;
 	cout << "0. Exit" << endl;
 
 }
