@@ -27,6 +27,7 @@ void Repo::updateProdus(const Produs& p, char* n, char* d, int pret)
 	produse[i].setNume(n);
 	produse[i].setData(d);
 	produse[i].setPret(pret);
+	
 }
 int Repo::findProdus(const Produs& p)
 {

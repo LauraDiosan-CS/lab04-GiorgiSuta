@@ -24,8 +24,10 @@ void MyTest() {
 	char datanoua[100] = "27.02.2017";
 	int pretnou = 100;
 	rep.updateProdus(p1, numenou, datanoua, pretnou);
-	
 	assert(rep.getAll()[i].getPret() == pretnou);
-	cout << p1;
+	assert(strcmp(rep.getAll()[i].getNume(), numenou) == 0);
+	assert(strcmp(rep.getAll()[i].getData(), datanoua) == 0);
+	rep.deleteProdus(rep.getAll()[i]);
+	assert(rep.size() == 0);
 	
 }
