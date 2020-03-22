@@ -34,19 +34,19 @@ int Produs::getPret()
 {
 	return this->pret;
 }
-void Produs::setNume(char* nume)
+void Produs::setNume(char* n)
 {
-	if (this->nume)
-		delete[] this->nume;
-	this->nume = new char[strlen(nume) + 1];
-	strcpy_s(this->nume, strlen(nume) + 1, nume);
+	if (nume)
+		delete[] nume;
+	nume = new char[strlen(n) + 1];
+	strcpy_s(nume, strlen(n) + 1, n);
 }
-void Produs::setData(char* data)
+void Produs::setData(char* d)
 {
-	if (this->data)
-		delete[] this->data;
-	this->data = new char[strlen(data) + 1];
-	strcpy_s(this->data, strlen(data) + 1, data);
+	if (data)
+		delete[] data;
+	data = new char[strlen(d) + 1];
+	strcpy_s(data, strlen(d) + 1, d);
 }
 
 void Produs::setPret(int pret) {
@@ -57,9 +57,13 @@ Produs& Produs:: operator=(const Produs& p)
 {
 	if (this == &p)
 		return *this;
-	this->setNume(p.nume);
-	this->setData(p.data);
-	this->setPret(p.pret);
+	if (nume) delete[] nume;
+	nume = new char[strlen(p.nume) + 1];
+	strcpy_s(nume, strlen(p.nume) + 1, p.nume);
+	if (data) delete[] data;
+	data = new char[strlen(p.data) + 1];
+	strcpy_s(data, strlen(p.data) + 1, p.data);
+	pret = p.pret;
 	return *this;
 }
 bool Produs:: operator == (const Produs& p)
