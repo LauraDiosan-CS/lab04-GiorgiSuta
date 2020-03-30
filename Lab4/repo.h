@@ -7,11 +7,12 @@ private:
 	int n;
 public:
 	Repo();
-	void addProdus(const Produs&);
-	void deleteProdus(const Produs&);
-	void updateProdus(const Produs&, char*, char*, int);
+	void addProdus(Produs);
+	void deleteProdus(Produs);
+	void updateProdus(Produs);
 	Produs* getAll();
-	int findProdus(const Produs&);
+	int findProdus(Produs);
 	~Repo();
 	int size();
+	
 };

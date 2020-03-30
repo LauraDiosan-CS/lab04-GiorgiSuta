@@ -6,11 +6,11 @@ Repo::Repo() {
 	this->n = 0;
 }
 
-void Repo::addProdus(const Produs& p)
+void Repo::addProdus( Produs p)
 {
 	this->produse[this->n++] = p;
 }
-void Repo::deleteProdus(const Produs& p)
+void Repo::deleteProdus(Produs p)
 {
 	for (int i = 0;i < n;i++) {
 		if (produse[i] == p)
@@ -21,15 +21,18 @@ void Repo::deleteProdus(const Produs& p)
 		}
 	}
 }
-void Repo::updateProdus(const Produs& p, char* n, char* d, int pret)
+void Repo::updateProdus( Produs p )
 {
-	int i = findProdus(p);
-	produse[i].setNume(n);
-	produse[i].setData(d);
-	produse[i].setPret(pret);
+	int n = this->size();
+	Produs* produse = this->getAll();
+	for (int i = 0;i < n;i++)
+	{
+		if (strcmp(p.getNume(), produse[i].getNume()) == 0)
+			produse[i] = p;
+	}
 	
 }
-int Repo::findProdus(const Produs& p)
+int Repo::findProdus(Produs p)
 {
 	for (int i = 0;i < n;i++)
 	{
@@ -42,7 +45,7 @@ Produs* Repo::getAll() {
 	return this->produse;
 }
 int Repo::size() {
-	return n;
+	return this->n;
 }
 Repo::~Repo() {
 	this->n = 0;

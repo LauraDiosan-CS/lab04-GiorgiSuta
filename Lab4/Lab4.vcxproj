@@ -138,15 +138,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="functii.h" />
     <ClInclude Include="produs.h" />
     <ClInclude Include="repo.h" />
+    <ClInclude Include="RepoUndo.h" />
+    <ClInclude Include="service.h" />
     <ClInclude Include="test.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="undo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="functii.cpp" />
     <ClCompile Include="produs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="repo.cpp" />
+    <ClCompile Include="RepoUndo.cpp" />
+    <ClCompile Include="service.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="undo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
